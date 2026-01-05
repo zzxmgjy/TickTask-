@@ -44,7 +44,7 @@ class SyncManager @Inject constructor(
      * 同步任务数据
      */
     private suspend fun syncTasks() {
-        val unsyncedTasks = taskDao.getUnsyncedTasks().first()
+        val unsyncedTasks = taskDao.getUnsyncedTasks(TaskEntity.SyncStatus.SYNCED).first()
         
         unsyncedTasks.forEach { taskEntity ->
             try {
@@ -94,14 +94,24 @@ class SyncManager @Inject constructor(
                 
                 if (localTask == null) {
                     // 本地不存在，创建
-                    val taskEntity = document.toTaskEntity()
-                    taskDao.insertTask(taskEntity)
-                } else if (taskData["updatedAt"] > localTask.updatedAt.toString()) {
-                    // 云端更新，更新本地
                     val taskEntity = document.toTaskEntity().copy(
-                        syncStatus = com.taskflow.data.local.entity.TaskEntity.SyncStatus.SYNCED
+                        isSynced = true,
+                        syncStatus = TaskEntity.SyncStatus.SYNCED
                     )
-                    taskDao.updateTask(taskEntity)
+                    taskDao.insertTask(taskEntity)
+                } else {
+                    val remoteUpdatedAt = document.getString("updatedAt")
+                        ?.let { runCatching { java.time.LocalDateTime.parse(it) }.getOrNull() }
+
+                    if (remoteUpdatedAt != null && remoteUpdatedAt.isAfter(localTask.updatedAt)) {
+                        // 云端更新，更新本地
+                        val taskEntity = document.toTaskEntity().copy(
+                            updatedAt = remoteUpdatedAt,
+                            isSynced = true,
+                            syncStatus = TaskEntity.SyncStatus.SYNCED
+                        )
+                        taskDao.updateTask(taskEntity)
+                    }
                 }
             }
             
