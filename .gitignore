@@ -1,34 +1,65 @@
-# Gradle files
+# Add files and directories that should be ignored by git
+
+# Gradle
 .gradle/
 build/
+!gradle/wrapper/gradle-wrapper.jar
 
-# Local configuration file (sdk path, etc)
+# Local configuration
 local.properties
 
-# Log/OS Files
-*.log
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+*.swp
+*.swo
+*~
 
-# Android Studio generated files and folders
+# Android Studio
+app/build/
 captures/
 .externalNativeBuild/
 .cxx/
-*.aab
-*.apk
 output-metadata.json
 
-# IntelliJ
-*.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
+# Generated
+gen/
+bin/
+out/
 
-# Keystore files
+# Keystore
 *.jks
 *.keystore
+*.apk
+*.aab
 
-# Google Services (e.g. APIs or Firebase)
+# Google Services
 google-services.json
 
-# Android Profiling
-*.hprof
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test
+*.egg-info/
+.coverage
+htmlcov/
+.pytest_cache/
+coverage.xml
+
+# Python virtual environment
+venv/
+env/
+.env
+
+# Misc
+*.orig
+*.rej

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TaskFlow</string>
+    
+    <!-- 通用 -->
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="edit">编辑</string>
+    <string name="confirm">确认</string>
+    <string name="retry">重试</string>
+    <string name="close">关闭</string>
+    <string name="search">搜索</string>
+    <string name="more">更多</string>
+    
+    <!-- 导航 -->
+    <string name="nav_home">首页</string>
+    <string name="nav_calendar">日历</string>
+    <string name="nav_focus">专注</string>
+    <string name="nav_habit">习惯</string>
+    <string name="nav_settings">设置</string>
+    
+    <!-- 任务 -->
+    <string name="task_title">任务标题</string>
+    <string name="task_description">描述</string>
+    <string name="add_task">添加任务</string>
+    <string name="edit_task">编辑任务</string>
+    <string name="delete_task">删除任务</string>
+    <string name="task_detail">任务详情</string>
+    <string name="subtasks">子任务</string>
+    <string name="add_subtask">添加子任务</string>
+    <string name="no_tasks">暂无任务</string>
+    
+    <!-- 清单 -->
+    <string name="list_name">清单名称</string>
+    <string name="create_list">创建清单</string>
+    <string name="edit_list">编辑清单</string>
+    <string name="delete_list">删除清单</string>
+    <string name="inbox">收集箱</string>
+    <string name="today">今天</string>
+    <string name="tomorrow">明天</string>
+    <string name="this_week">本周</string>
+    
+    <!-- 日期 -->
+    <string name="due_date">截止日期</string>
+    <string name="reminder">提醒</string>
+    <string name="repeat">重复</string>
+    <string name="no_repeat">不重复</string>
+    <string name="select_date">选择日期</string>
+    <string name="select_time">选择时间</string>
+    
+    <!-- 优先级 -->
+    <string name="priority">优先级</string>
+    <string name="priority_high">高</string>
+    <string name="priority_medium">中</string>
+    <string name="priority_low">低</string>
+    <string name="priority_none">无</string>
+    
+    <!-- 标签 -->
+    <string name="tags">标签</string>
+    <string name="add_tag">添加标签</string>
+    <string name="manage_tags">管理标签</string>
+    
+    <!-- 提醒 -->
+    <string name="notification_channel_name">任务提醒</string>
+    <string name="notification_channel_description">任务到期提醒通知</string>
+    <string name="notification_title">任务提醒</string>
+    
+    <!-- 登录注册 -->
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="email">邮箱</string>
+    <string name="password">密码</string>
+    <string name="confirm_password">确认密码</string>
+    <string name="forgot_password">忘记密码</string>
+    <string name="no_account">还没有账号？</string>
+    <string name="has_account">已有账号？</string>
+    <string name="register_now">立即注册</string>
+    <string name="login_now">立即登录</string>
+    
+    <!-- 设置 -->
+    <string name="appearance">外观</string>
+    <string name="dark_mode">深色模式</string>
+    <string name="theme">主题颜色</string>
+    <string name="notifications">通知</string>
+    <string name="app_notifications">应用通知</string>
+    <string name="data_sync">数据与同步</string>
+    <string name="offline_mode">离线模式</string>
+    <string name="cloud_sync">云同步</string>
+    <string name="storage">存储空间</string>
+    <string name="security">安全</string>
+    <string name="app_lock">应用锁</string>
+    <string name="privacy">隐私保护</string>
+    <string name="account">账户</string>
+    <string name="account_info">账户信息</string>
+    <string name="logout">退出登录</string>
+    <string name="about">关于</string>
+    <string name="version">版本</string>
+    <string name="terms">使用条款</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="feedback">反馈与建议</string>
+    
+    <!-- 习惯 -->
+    <string name="habits">习惯</string>
+    <string name="today_habits">今日习惯</string>
+    <string name="my_habits">我的习惯</string>
+    <string name="habit_stats">习惯统计</string>
+    <string name="create_habit">创建习惯</string>
+    <string name="streak">连续天数</string>
+    <string name="check_in">打卡</string>
+    
+    <!-- 专注 -->
+    <string name="focus_mode">专注模式</string>
+    <string name="pomodoro">番茄钟</string>
+    <string name="focus_time">专注时间</string>
+    <string name="break_time">休息时间</string>
+    <string name="start_focus">开始专注</string>
+    <string name="stop_focus">停止专注</string>
+    <string name="focus_duration">专注时长</string>
+    
+    <!-- 错误提示 -->
+    <string name="error_network">网络错误，请检查网络连接</string>
+    <string name="error_unknown">发生未知错误</string>
+    <string name="error_empty_title">任务标题不能为空</string>
+    <string name="error_invalid_email">请输入有效的邮箱地址</string>
+    <string name="error_password_short">密码长度至少6位</string>
+    <string name="error_password_not_match">两次输入的密码不一致</string>
+    
+    <!-- 确认对话框 -->
+    <string name="confirm_delete_task">确定要删除这个任务吗？此操作不可恢复。</string>
+    <string name="confirm_delete_list">确定要删除这个清单吗？清单下的任务将被移至收集箱。</string>
+    <string name="confirm_logout">确定要退出登录吗？</string>
+</resources>
